@@ -8,7 +8,7 @@ class CoursesPage extends React.Component {
       course: { title: '' }
     };
 
-    // instead of calling ".bid(this)" in the render
+    // instead of calling ".bind(this)" in the render
     // which is less performance
     // we do it here
     this.onTitleChange = this.onTitleChange.bind(this);
