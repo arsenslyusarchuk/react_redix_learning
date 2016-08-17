@@ -2,6 +2,7 @@ import {combineReducers} from 'redux';
 // because it's exported as default we can give whatever name we want
 import courses from './courseReducer';
 import authors from './authorReducer';
+import ajaxCallsInProgress from './ajaxStatusReducer';
 
 // we could use courses: courses
 // but because it's ES6 we can use this 
@@ -15,7 +16,8 @@ import authors from './authorReducer';
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const rootReducer = combineReducers({
   courses,
-  authors
+  authors,
+  ajaxCallsInProgress
 });
 
 export default rootReducer;
