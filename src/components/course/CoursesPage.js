@@ -11,17 +11,13 @@ class CoursesPage extends React.Component {
     this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
   }
 
-  courseRow(course, index) {
-    return <div key={index}>{course.title}</div>;
-  }
-
   redirectToAddCoursePage() {
     browserHistory.push('/course');
   }
 
   render() {
     // using ES6 object destruction
-    const {courses} = this.props;
+    const {courses, actions} = this.props;
   
     return (
       <div>
@@ -30,7 +26,7 @@ class CoursesPage extends React.Component {
                value="Add Course"
                className="btn btn-primary"
                onClick={this.redirectToAddCoursePage}/>
-        <CourseList courses={courses}/>
+        <CourseList courses={courses} actions={actions}/>
       </div>
     );
   }
