@@ -17,7 +17,10 @@ export function updateCourseSuccess(course) {
 export function deleteCourseSuccess(course) {
   return {type: types.DELETE_COURSE_SUCCESS, course};
 }
-
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// these function are thunks
+// they can be used the same way as Promises
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function loadCourses() {
   return function(dispatch) {
     dispatch(beginAjaxCall());

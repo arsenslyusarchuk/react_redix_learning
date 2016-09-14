@@ -16,6 +16,9 @@ const store = configureStore();
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
 
+
+// Provider component is a part of redux lib
+// and used to connect our container component to redux store
 render(
   // to be able to access store in components
   <Provider store={store}>
